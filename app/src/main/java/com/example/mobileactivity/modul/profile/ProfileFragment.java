@@ -18,8 +18,10 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
     TextView tvEmail;
     TextView tvPassword;
     Button btnLogout;
+    Bundle bundle;
 
-    public ProfileFragment() {
+    public ProfileFragment(Bundle bundle) {
+        this.bundle = bundle;
     }
 
     @Nullable
@@ -33,7 +35,7 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
         tvEmail = fragmentView.findViewById(R.id.tv_email);
         tvPassword = fragmentView.findViewById(R.id.tv_password);
 
-        setTextView();
+        mPresenter.getUserInfo(bundle);
 
         btnLogout = fragmentView.findViewById(R.id.bt_logout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
@@ -48,15 +50,6 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
         return fragmentView;
     }
 
-    public void setTextView() {
-        Intent intent = getActivity().getIntent();
-        String email = intent.getStringExtra("email");
-        String password = intent.getStringExtra("password");
-
-        tvEmail.setText(email);
-        tvPassword.setText(password);
-    }
-
     public void setBtLogoutClick(){
         mPresenter.performLogout();
     }
@@ -64,6 +57,12 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
     @Override
     public void setPresenter(ProfileContract.Presenter presenter) {
         mPresenter = presenter;
+    }
+
+    @Override
+    public void showUser(String email, String password) {
+        tvEmail.setText(email);
+        tvPassword.setText(password);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.example.mobileactivity.modul.profile;
 
+import android.os.Bundle;
 import android.view.View;
 
 import com.example.mobileactivity.base.BaseFragmentHolderActivity;
@@ -14,10 +15,10 @@ public class ProfileActivity extends BaseFragmentHolderActivity {
 
         btBack.setVisibility(View.GONE);
         btOptionMenu.setVisibility(View.GONE);
-//        ivIcon.setImageResource(R.drawable.....);
         ivIcon.setVisibility(View.VISIBLE);
 
-        profileFragment = new ProfileFragment();
+        Bundle bundle = getIntent().getExtras();
+        profileFragment = new ProfileFragment(bundle);
         setCurrentFragment(profileFragment, false);
     }
 }
