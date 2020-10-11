@@ -1,7 +1,7 @@
-package com.example.mobileactivity.modul.login;
+package com.example.todolistmvp.modul.login;
 
-import com.example.mobileactivity.base.BasePresenter;
-import com.example.mobileactivity.base.BaseView;
+import com.example.todolistmvp.base.BasePresenter;
+import com.example.todolistmvp.base.BaseView;
 
 public interface LoginContract {
     interface View extends BaseView<Presenter> {

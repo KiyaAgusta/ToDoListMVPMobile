@@ -1,4 +1,4 @@
-package com.example.mobileactivity.modul.profile;
+package com.example.todolistmvp.modul.profile;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +10,15 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import com.example.mobileactivity.R;
-import com.example.mobileactivity.base.BaseFragment;
-import com.example.mobileactivity.modul.login.LoginActivity;
+import com.example.todolistmvp.R;
+import com.example.todolistmvp.base.BaseFragment;
+import com.example.todolistmvp.modul.login.LoginActivity;
+import com.example.todolistmvp.modul.todo.ToDoActivity;
 
 public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContract.Presenter> implements ProfileContract.View {
     TextView tvEmail;
     TextView tvPassword;
+    Button btnToDo;
     Button btnLogout;
     Bundle bundle;
 
@@ -37,6 +39,14 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
 
         mPresenter.getUserInfo(bundle);
 
+        btnToDo = fragmentView.findViewById(R.id.bt_todo);
+        btnToDo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setBtToDoClick();
+            }
+        });
+
         btnLogout = fragmentView.findViewById(R.id.bt_logout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +58,10 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
         setTitle("My Profile View");
 
         return fragmentView;
+    }
+
+    public void setBtToDoClick(){
+        mPresenter.performToDoList();
     }
 
     public void setBtLogoutClick(){
@@ -63,6 +77,13 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
     public void showUser(String email, String password) {
         tvEmail.setText(email);
         tvPassword.setText(password);
+    }
+
+    @Override
+    public void redirectToToDoList() {
+        Intent intent = new Intent(activity, ToDoActivity.class);
+        startActivity(intent);
+        activity.finish();
     }
 
     @Override

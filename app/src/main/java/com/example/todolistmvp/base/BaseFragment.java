@@ -1,4 +1,4 @@
-package com.example.mobileactivity.base;
+package com.example.todolistmvp.base;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.mobileactivity.R;
+import com.example.todolistmvp.R;
 
 public abstract class BaseFragment<T extends FragmentActivity, U extends BasePresenter> extends Fragment {
     protected String title;

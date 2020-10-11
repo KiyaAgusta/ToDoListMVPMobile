@@ -1,4 +1,4 @@
-package com.example.mobileactivity.modul.login;
+package com.example.todolistmvp.modul.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 
-import com.example.mobileactivity.R;
-import com.example.mobileactivity.base.BaseFragment;
-import com.example.mobileactivity.modul.profile.ProfileActivity;
+import com.example.todolistmvp.R;
+import com.example.todolistmvp.base.BaseFragment;
+import com.example.todolistmvp.modul.profile.ProfileActivity;
 
 public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Presenter> implements LoginContract.View {
     EditText etEmail;

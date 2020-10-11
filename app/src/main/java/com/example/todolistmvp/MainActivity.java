@@ -1,4 +1,4 @@
-package com.example.mobileactivity;
+package com.example.todolistmvp;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mobileactivity">
+    package="com.example.todolistmvp">
 
     <application
         android:allowBackup="true"
@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyNewTheme">
-        <activity android:name=".modul.profile.ProfileActivity"></activity>
-        <activity android:name=".modul.login.LoginActivity">
+        <activity android:name="com.example.todolistmvp.modul.add.AddActivity"></activity>
+        <activity android:name="com.example.todolistmvp.modul.todo.ToDoActivity"></activity>
+        <activity android:name="com.example.todolistmvp.modul.profile.ProfileActivity"></activity>
+        <activity android:name="com.example.todolistmvp.modul.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

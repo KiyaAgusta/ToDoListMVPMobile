@@ -1,4 +1,4 @@
-package com.example.mobileactivity.modul.profile;
+package com.example.todolistmvp.modul.profile;
 
 import android.os.Bundle;
 
@@ -17,6 +17,11 @@ public class ProfilePresenter implements ProfileContract.Presenter {
         String email = bundle.getString("email");
         String password = bundle.getString("password");
         view.showUser(email, password);
+    }
+
+    @Override
+    public void performToDoList() {
+        view.redirectToToDoList();
     }
 
     @Override

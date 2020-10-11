@@ -1,9 +1,9 @@
-package com.example.mobileactivity.modul.profile;
+package com.example.todolistmvp.modul.profile;
 
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.mobileactivity.base.BaseFragmentHolderActivity;
+import com.example.todolistmvp.base.BaseFragmentHolderActivity;
 
 public class ProfileActivity extends BaseFragmentHolderActivity {
     ProfileFragment profileFragment;

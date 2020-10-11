@@ -1,8 +1,8 @@
-package com.example.mobileactivity.modul.login;
+package com.example.todolistmvp.modul.login;
 
 import android.view.View;
 
-import com.example.mobileactivity.base.BaseFragmentHolderActivity;
+import com.example.todolistmvp.base.BaseFragmentHolderActivity;
 
 public class LoginActivity extends BaseFragmentHolderActivity {
     LoginFragment loginFragment;

@@ -48,6 +48,15 @@
             android:text="TextView" />
 
         <Button
+            android:id="@+id/bt_todo"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/textWhiteColor"
+            android:background="?attr/colorPrimary"
+            android:text="To Do List" />
+
+        <Button
             android:id="@+id/bt_logout"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"

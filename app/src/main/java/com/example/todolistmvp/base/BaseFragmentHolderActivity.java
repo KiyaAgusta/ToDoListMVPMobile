@@ -1,4 +1,4 @@
-package com.example.mobileactivity.base;
+package com.example.todolistmvp.base;
 
 import android.view.View;
 import android.widget.FrameLayout;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.mobileactivity.R;
+import com.example.todolistmvp.R;
 
 public abstract class BaseFragmentHolderActivity extends BaseActivity {
     protected TextView tvToolbarTitle;

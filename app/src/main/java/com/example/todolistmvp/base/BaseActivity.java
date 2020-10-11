@@ -1,4 +1,4 @@
-package com.example.mobileactivity.base;
+package com.example.todolistmvp.base;
 
 import android.os.Bundle;
 
@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.mobileactivity.R;
+import com.example.todolistmvp.R;
 
 public abstract class BaseActivity extends FragmentActivity implements FragmentListener {
     protected BaseFragment currentFragment;
