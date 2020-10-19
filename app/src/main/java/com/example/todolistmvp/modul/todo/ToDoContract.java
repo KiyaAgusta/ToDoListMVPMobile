@@ -11,6 +11,7 @@ public interface ToDoContract {
         void emptyList();
         void showEditBox(String uneditedItem, final int index);
         void showDeleteDialog(final int position);
+        void redirectToLogin();
     }
 
     interface Presenter extends BasePresenter {
@@ -18,5 +19,6 @@ public interface ToDoContract {
         void clearList();
         void editList(String uneditedItem, final int index);
         void deleteItem(final int position);
+        void performLogout();
     }
 }

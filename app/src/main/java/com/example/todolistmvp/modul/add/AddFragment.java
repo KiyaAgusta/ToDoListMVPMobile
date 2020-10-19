@@ -61,5 +61,6 @@ public class AddFragment extends BaseFragment<AddActivity, AddContract.Presenter
         Intent returnIntent = new Intent(activity, ToDoActivity.class);
         returnIntent.putStringArrayListExtra("returnData", toDoList);
         startActivity(returnIntent);
+        activity.finish();
     }
 }

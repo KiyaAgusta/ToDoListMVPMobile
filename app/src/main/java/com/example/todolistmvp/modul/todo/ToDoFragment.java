@@ -21,6 +21,7 @@ import androidx.annotation.Nullable;
 import com.example.todolistmvp.R;
 import com.example.todolistmvp.base.BaseFragment;
 import com.example.todolistmvp.modul.add.AddActivity;
+import com.example.todolistmvp.modul.login.LoginActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,6 +30,7 @@ public class ToDoFragment extends BaseFragment<ToDoActivity, ToDoContract.Presen
     ListView itemListView;
     Button btnAdd;
     Button btnClear;
+    Button btnLogout;
     String[] toDoArray = {"Nugas", "Makan", "Mandi", "Rebahan", "Olahraga", "Ngedate"};
     ArrayList<String> toDoArrayList;
     ArrayList<String> returnedList;
@@ -49,8 +51,13 @@ public class ToDoFragment extends BaseFragment<ToDoActivity, ToDoContract.Presen
         itemListView = fragmentView.findViewById(R.id.itemListView);
         btnAdd = fragmentView.findViewById(R.id.btnAdd);
         btnClear = fragmentView.findViewById(R.id.btnClear);
+        btnLogout = fragmentView.findViewById(R.id.btnLogout);
 
-        toDoArrayList = new ArrayList<>(Arrays.asList(toDoArray));
+        if (returnedList == null)
+            toDoArrayList = new ArrayList<>(Arrays.asList(toDoArray));
+        else
+            toDoArrayList = returnedList;
+
         adapter = new ArrayAdapter<>(activity, android.R.layout.simple_list_item_1, toDoArrayList);
         itemListView.setAdapter(adapter);
 
@@ -80,6 +87,13 @@ public class ToDoFragment extends BaseFragment<ToDoActivity, ToDoContract.Presen
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 mPresenter.deleteItem(position);
                 return true;
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPresenter.performLogout();
             }
         });
 
@@ -147,5 +161,12 @@ public class ToDoFragment extends BaseFragment<ToDoActivity, ToDoContract.Presen
                     }
                 })
                 .show();
+    }
+
+    @Override
+    public void redirectToLogin() {
+        Intent intent = new Intent(activity, LoginActivity.class);
+        startActivity(intent);
+        activity.finish();
     }
 }

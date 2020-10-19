@@ -32,4 +32,9 @@ public class ToDoPresenter implements ToDoContract.Presenter {
     public void deleteItem(int position) {
         view.showDeleteDialog(position);
     }
+
+    @Override
+    public void performLogout(){
+        view.redirectToLogin();
+    }
 }

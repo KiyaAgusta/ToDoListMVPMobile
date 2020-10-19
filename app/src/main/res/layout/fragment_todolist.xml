@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="4dp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -37,7 +36,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="575dp"
         android:orientation="horizontal"
         android:layout_marginTop="52dp" >
 
@@ -47,5 +46,22 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true">
         </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="525dp"
+            android:textColor="?attr/textWhiteColor"
+            android:background="?attr/colorPrimary"
+            android:text="Logout" />
+
     </LinearLayout>
 </RelativeLayout>

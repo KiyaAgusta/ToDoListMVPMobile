@@ -22,6 +22,6 @@ public class AddActivity extends BaseFragmentHolderActivity {
         ivIcon.setVisibility(View.VISIBLE);
 
         addFragment = new AddFragment(toDoList);
-        setCurrentFragment(addFragment, true);
+        setCurrentFragment(addFragment, false);
     }
 }
