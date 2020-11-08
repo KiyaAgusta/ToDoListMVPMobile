@@ -15,14 +15,13 @@ import com.example.todolistmvp.base.BaseFragment;
 import com.example.todolistmvp.modul.profile.ProfileActivity;
 
 public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Presenter> implements LoginContract.View {
-    EditText etEmail;
-    EditText etPassword;
-    Button btnLogin;
-    String email;
-    String password;
+    private EditText etEmail;
+    private EditText etPassword;
+    private Button btnLogin;
+    private String email;
+    private String password;
 
-    public LoginFragment() {
-    }
+    public LoginFragment() {}
 
     @Nullable
     @Override
@@ -42,7 +41,7 @@ public class LoginFragment extends BaseFragment<LoginActivity, LoginContract.Pre
             }
         });
 
-        setTitle("My Login View");
+        setTitle("LOG IN");
 
         return fragmentView;
     }

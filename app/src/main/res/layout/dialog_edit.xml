@@ -13,27 +13,53 @@
         android:textSize="21sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal" >
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" >
 
         <EditText
-            android:id="@+id/textInput"
+            android:id="@+id/titleEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:layout_margin="5dp" />
 
-        <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/descriptionEdit"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="?attr/textWhiteColor"
-            android:background="?attr/colorPrimary"
-            android:text="Edit"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_margin="5dp" />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textWhiteColor"
+                android:background="?attr/colorPrimary"
+                android:text="Edit"
+                android:layout_weight="1"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/textWhiteColor"
+                android:background="?attr/colorPrimary"
+                android:text="Delete"
+                android:layout_weight="1"
+                android:layout_margin="10dp" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

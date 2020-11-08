@@ -1,7 +1,6 @@
 package com.example.todolistmvp.modul.todo;
 
-import android.os.Bundle;
-
+import com.example.todolistmvp.data.model.Task;
 
 public class ToDoPresenter implements ToDoContract.Presenter {
     private final ToDoContract.View view;
@@ -24,12 +23,12 @@ public class ToDoPresenter implements ToDoContract.Presenter {
     }
 
     @Override
-    public void editList(String uneditedItem, int index) {
-        view.showEditBox(uneditedItem, index);
+    public void editList(final Task uneditedItem) {
+        view.showEditBox(uneditedItem);
     }
 
     @Override
-    public void deleteItem(int position) {
+    public void deleteItem(final int position) {
         view.showDeleteDialog(position);
     }
 

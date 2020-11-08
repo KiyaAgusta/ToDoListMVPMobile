@@ -5,21 +5,33 @@
     android:orientation="vertical" >
 
     <EditText
-        android:id="@+id/newData"
+        android:id="@+id/newTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:layout_marginLeft="7dp"
         android:layout_marginRight="7dp"
-        android:hint="Enter an item here"
+        android:hint="@string/enter_title"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/newDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newTitle"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:hint="@string/enter_description"
         android:inputType="text" />
 
     <Button
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/newData"
+        android:layout_below="@id/newDescription"
         android:layout_marginTop="10dp"
         android:textColor="?attr/textWhiteColor"
         android:background="?attr/colorPrimary"
-        android:text="Add Item" />
+        android:text="@string/add_item" />
 </RelativeLayout>

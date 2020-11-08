@@ -6,7 +6,7 @@ import android.view.View;
 import com.example.todolistmvp.base.BaseFragmentHolderActivity;
 
 public class ProfileActivity extends BaseFragmentHolderActivity {
-    ProfileFragment profileFragment;
+    protected ProfileFragment profileFragment;
     private final int UPDATE_REQUEST = 2019;
 
     @Override

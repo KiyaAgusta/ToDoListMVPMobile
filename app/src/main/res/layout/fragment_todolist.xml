@@ -15,22 +15,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginTop="7dp"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="34dp"
             android:textColor="?attr/textWhiteColor"
             android:background="?attr/colorPrimary"
-            android:text="Add" />
+            android:text="@string/add" />
 
         <Button
             android:id="@+id/btnClear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_marginTop="7dp"
             android:layout_marginLeft="34dp"
             android:layout_marginRight="70dp"
             android:textColor="?attr/textWhiteColor"
             android:background="?attr/colorPrimary"
-            android:text="Clear"/>
+            android:text="@string/clear"/>
 
     </LinearLayout>
 
@@ -38,14 +40,13 @@
         android:layout_width="match_parent"
         android:layout_height="575dp"
         android:orientation="horizontal"
-        android:layout_marginTop="52dp" >
+        android:layout_marginTop="65dp" >
 
-        <ListView
-            android:id="@+id/itemListView"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTodolist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-        </ListView>
+            android:paddingTop="12dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -58,10 +59,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="525dp"
+            android:layout_marginTop="535dp"
             android:textColor="?attr/textWhiteColor"
             android:background="?attr/colorPrimary"
-            android:text="Logout" />
+            android:text="@string/log_out" />
 
     </LinearLayout>
 </RelativeLayout>

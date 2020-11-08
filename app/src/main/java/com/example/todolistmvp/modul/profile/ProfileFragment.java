@@ -16,11 +16,11 @@ import com.example.todolistmvp.modul.login.LoginActivity;
 import com.example.todolistmvp.modul.todo.ToDoActivity;
 
 public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContract.Presenter> implements ProfileContract.View {
-    TextView tvEmail;
-    TextView tvPassword;
-    Button btnToDo;
-    Button btnLogout;
-    Bundle bundle;
+    private TextView tvEmail;
+    private TextView tvPassword;
+    private Button btnToDo;
+    private Button btnLogout;
+    private Bundle bundle;
 
     public ProfileFragment(Bundle bundle) {
         this.bundle = bundle;
@@ -55,7 +55,7 @@ public class ProfileFragment extends BaseFragment<ProfileActivity, ProfileContra
             }
         });
 
-        setTitle("My Profile View");
+        setTitle("PROFILE");
 
         return fragmentView;
     }

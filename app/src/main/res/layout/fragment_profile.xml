@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="?attr/textDarkColor"
-            android:text="Email" />
+            android:text="@string/email" />
 
         <TextView
             android:id="@+id/tv_email"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="?attr/textDarkColor"
-            android:text="Password" />
+            android:text="@string/password" />
 
         <TextView
             android:id="@+id/tv_password"
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:textColor="?attr/textWhiteColor"
             android:background="?attr/colorPrimary"
-            android:text="To Do List" />
+            android:text="@string/to_do_list" />
 
         <Button
             android:id="@+id/bt_logout"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:textColor="?attr/textWhiteColor"
             android:background="?attr/colorPrimary"
-            android:text="Log Out" />
+            android:text="@string/log_out" />
     </LinearLayout>
 
 </RelativeLayout>

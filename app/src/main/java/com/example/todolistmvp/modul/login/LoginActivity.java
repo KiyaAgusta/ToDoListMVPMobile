@@ -5,7 +5,7 @@ import android.view.View;
 import com.example.todolistmvp.base.BaseFragmentHolderActivity;
 
 public class LoginActivity extends BaseFragmentHolderActivity {
-    LoginFragment loginFragment;
+    protected LoginFragment loginFragment;
     private final int UPDATE_REQUEST = 2019;
 
     @Override
